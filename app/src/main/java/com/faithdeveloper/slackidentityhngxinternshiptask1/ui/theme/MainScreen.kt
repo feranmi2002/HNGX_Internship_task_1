@@ -20,7 +20,7 @@ import com.faithdeveloper.slackidentityhngxinternshiptask1.R
 
 @Preview(showBackground = true)
 @Composable
-fun MainScreen() {
+fun MainScreen(onGithubClick:() -> Unit) {
 
     val context = LocalContext.current
     Column(
@@ -68,7 +68,7 @@ fun MainScreen() {
         }
 
         Button(onClick = {
-//            open github web page
+            onGithubClick.invoke()
         }) {
             Text(
                 modifier = Modifier.wrapContentSize(align = Alignment.Center),
